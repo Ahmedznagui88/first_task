@@ -7,6 +7,8 @@ int main()
     cout << "Enter 3 letters: " << endl;
     cin >> a >> b >> c;
 
+    double num = 122 - 97;
+
     bool firstAndSecond = (a >= 97 && a < 110) && (b >= 97 && b < 110) && (c >= 97 && c < 110);
     bool thirdAndFourth = (a >= 110 && a <= 122) && (b >= 110 && b <= 122) && (c >= 110 && c <= 122);
 
@@ -20,12 +22,13 @@ int main()
         b -= 13;
         c -= 13;
         cout << "ROT13: " << a << " " << b << " " << c << endl;
+    } else if(firstAndSecond && thirdAndFourth) {
+        cout << "ROT13: ";
+        cout << ((a * num) ? a : '?') << " ";
+        cout << ((b * num) ? b : '?') << " ";
+        cout << ((c * num) ? c : '?') << endl;
     } else {
-        if (!(a >= 97 && a <= 122)) a = '?';
-        if (!(b >= 97 && b <= 122)) b = '?';
-        if (!(c >= 97 && c <= 122)) c = '?';
-
-        cout << "Invalid letters: " << a << " " << b << " " << c << endl;
+        cout << "ROT13: ?";
     }
     
     return 0;
