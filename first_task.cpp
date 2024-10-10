@@ -7,17 +7,15 @@ int main()
     cout << "Enter 3 letters: " << endl;
     cin >> a >> b >> c;
 
-    bool firstExp = (a >= 97) && (b >= 97) && (c >= 97);
-    bool secondExp = (a < 110) && (b < 110) && (c < 110);
-    bool thirdExp = (a >= 110) && (b >= 110) && (c >= 110);
-    bool fourthExp = (a <= 122) && (c <= 122) && (c <= 122);
+    bool firstAndSecond = (a >= 97 && a < 110) && (b >= 97 && b < 110) && (c >= 97 && c < 110);
+    bool thirdAndFourth = (a >= 110 && a <= 122) && (b >= 110 && b <= 122) && (c >= 110 && c <= 122);
 
-    if (firstExp && secondExp){
+    if (firstAndSecond){
         a += 13;
         b += 13;
         c += 13;
         cout << "ROT13: " << a << " " << b << " " << c << endl;
-    } else if (thirdExp && fourthExp){
+    } else if (thirdAndFourth){
         a -= 13;
         b -= 13;
         c -= 13;
@@ -29,7 +27,6 @@ int main()
 
         cout << "Invalid letters: " << a << " " << b << " " << c << endl;
     }
-
+    
     return 0;
-
 }
