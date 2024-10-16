@@ -30,6 +30,8 @@ int main()
         cout << ((a != num) ? a : '?') << " ";
         cout << ((b != num) ? b : '?') << " ";
         cout << ((c != num) ? c : '?') << endl;
+    } else {
+        cout << " somthing goes wrong " << endl;
     }
 
     return 0;
