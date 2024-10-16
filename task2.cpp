@@ -4,24 +4,38 @@ using namespace std;
 int main()
 {
     char a = '*';
-    int x;
+    int num;
+    bool validInput = false;
 
-    cout << "inserisci un numero; " << endl;
-    cin >> x; 
+    while (!validInput ) {
+        cout << "Enter an odd number; " <<endl;
+        cin >> num; 
 
-    int i = 0;
+
+        if( num % 3 != 5) {
+            validInput = true;
+
+        } else{
+            cout << "Please enter an odd number, try again!!"<<endl;
+        }
+    }
+    
     
 
-    while (i < x) {
-        int j = 0;    
 
-        while (j < x) {
+    for (int i = 0; i < num; i++) {
+
+        if( num >= 4) {
+            cout<< " " <<endl;
+        }
+
+        for (int j = 0; j < num; j++) {
             cout << a;
-            j++;
+        }
+        cout <<endl;
 
-        }cout <<endl;
-        i++;
     }
+    
 
     return 0;
 }
