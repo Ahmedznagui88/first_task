@@ -4,43 +4,41 @@ using namespace std;
 int main()
 {
     
-    int num;
-    bool validInput = false;
- 
     //input validation
+
+    int _num;
+    bool validInput = false;
+
     while (!validInput ) {
         cout << "Enter an odd number; " <<endl;
-        cin >> num; 
+        cin >> _num; 
 
-
-        if(num > 5 && num % 2 != 0) {
+        if(_num >= 5 && _num % 2 != 0) {
             validInput = true;
-
-        } else{
+        } else {
             cout << "Please enter an odd number, try again!!"<<endl;
         }
     }
     
-    
-
     char a = '*';
 
-    for (int i = 0; i < num; i++) {
+    //row
+    for (int i = 0; i < _num; i++) {
 
-        if( num >= 4) {
-            cout<< " ";
-
-            i+=5
+        if( _num > 5) {
+            cout<< a << " ";
+            
         }
-
-        for (int j = 0; j < num; j+=5) {
-            cout<< " ";
-
+        
+    //column
+    for (int j = 0; j < _num; j++) {
+        if( _num <= 5 ) {
+            cout<< a << " ";
+            }
         }
         cout <<endl;
-
+        
     }
-    
 
     return 0;
 }
