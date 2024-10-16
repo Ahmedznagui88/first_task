@@ -3,16 +3,17 @@ using namespace std;
 
 int main()
 {
-    char a = '*';
+    
     int num;
     bool validInput = false;
-
+ 
+    //input validation
     while (!validInput ) {
         cout << "Enter an odd number; " <<endl;
         cin >> num; 
 
 
-        if( num % 3 != 5) {
+        if(num > 5 && num % 2 != 0) {
             validInput = true;
 
         } else{
@@ -22,15 +23,19 @@ int main()
     
     
 
+    char a = '*';
 
     for (int i = 0; i < num; i++) {
 
         if( num >= 4) {
-            cout<< " " <<endl;
+            cout<< " ";
+
+            i+=5
         }
 
-        for (int j = 0; j < num; j++) {
-            cout << a;
+        for (int j = 0; j < num; j+=5) {
+            cout<< " ";
+
         }
         cout <<endl;
 
