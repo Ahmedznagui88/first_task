@@ -1,43 +1,35 @@
 #include <iostream>
 using namespace std;
 
-int main()
-{
-    
-    //input validation
+int main() {
 
     int _num;
-    bool validInput = false;
+    bool _validInput = false;
 
-    while (!validInput ) {
-        cout << "Enter an odd number; " <<endl;
-        cin >> _num; 
+    while (!_validInput) {
+        cout << "Enter an odd number; " << endl;
+        cin >> _num;
 
-        if(_num >= 5 && _num % 2 != 0) {
-            validInput = true;
+        if (_num >= 3 && _num % 2 != 0) {
+            _validInput = true;
         } else {
-            cout << "Please enter an odd number, try again!!"<<endl;
+            cout << "Please enter an odd number, try again!!" << endl;
         }
     }
+
+    char _asterisk = '*';
     
-    char a = '*';
+    for (int i = 0; i <= _num - 1; i++) {
 
-    //row
-    for (int i = 0; i < _num; i++) {
-
-        if( _num > 5) {
-            cout<< a << " ";
+        for (int j = 0; j <= _num - 1; j++) {
             
-        }
-        
-    //column
-    for (int j = 0; j < _num; j++) {
-        if( _num <= 5 ) {
-            cout<< a << " ";
+            if (j == i || j == _num - 1 - i) {
+                cout << _asterisk;
+            } else {
+                cout << " ";
             }
         }
-        cout <<endl;
-        
+        cout << endl;
     }
 
     return 0;
